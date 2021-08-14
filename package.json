@@ -6,7 +6,7 @@
     "scripts": {
         "start": "node index.js",
         "dev": "nodemon index.js",
-        "test": "jest --runInBand"
+        "test": "jest"
     },
     "keywords": [],
     "author": "Leandre Nsengumuremyi <leajapo@gmail.com> (https://github.com/dreking)",
