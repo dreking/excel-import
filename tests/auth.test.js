@@ -6,14 +6,10 @@ const sequelize = require('../start/db');
 beforeAll(async () => {
     await sequelize.sync();
 
-    test('Should sign up', async () => {
-        await request(app)
-            .post('/api/auth/signup')
-            .set('content-type', 'application/json')
-            .send({ username: 'testing', password: 'testing' })
-            .expect(201)
-            .then();
-    });
+    await request(app)
+        .post('/api/auth/signup')
+        .set('content-type', 'application/json')
+        .send({ username: 'testing', password: 'testing' });
 });
 
 afterAll(async () => {
@@ -24,7 +20,7 @@ test('Should sign up', async () => {
     await request(app)
         .post('/api/auth/signup')
         .set('content-type', 'application/json')
-        .send({ username: 'testing', password: 'testing' })
+        .send({ username: 'testing1', password: 'testing1' })
         .expect(201)
         .then();
 });
