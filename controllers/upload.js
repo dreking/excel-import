@@ -87,9 +87,9 @@ exports.getUploadedData = async (req, res) => {
 };
 
 exports.postCommitData = async (req, res) => {
-    const { status, id } = req.body;
+    const { action, id } = req.body;
 
-    if (status === 'no') {
+    if (action === 'no') {
         await RawData.destroy({ where: { name: id } });
 
         return res.status(200).json({
