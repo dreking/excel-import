@@ -29,13 +29,13 @@ jobs:
                   DB_PASSWORD: ${{secrets.DB_PASSWORD}}
                   DB_NAME: ${{secrets.DB_NAME}}
                   JWT_KEY: ${{secrets.JWT_KEY}}
-            # - name: Test all test cases
-            #   run: npm run test --coverage
-            #   env:
-            #       ENVIRONMENT: ${{secrets.ENVIRONMENT}}
-            #       DEVELOPER: ${{secrets.DEVELOPER}}
-            #       PORT: ${{secrets.PORT}}
-            #       DB_USER: ${{secrets.DB_USER}}
-            #       DB_PASSWORD: ${{secrets.DB_PASSWORD}}
-            #       DB_NAME: ${{secrets.DB_NAME}}
-            #       JWT_KEY: ${{secrets.JWT_KEY}}
+            - name: Test all test cases
+              run: npm run test --coverage
+              env:
+                  ENVIRONMENT: ${{secrets.ENVIRONMENT}}
+                  DEVELOPER: ${{secrets.DEVELOPER}}
+                  PORT: ${{secrets.PORT}}
+                  DB_USER: ${{secrets.DB_USER}}
+                  DB_PASSWORD: ${{secrets.DB_PASSWORD}}
+                  DB_NAME: ${{secrets.DB_NAME}}
+                  JWT_KEY: ${{secrets.JWT_KEY}}
