@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
 const morgan = require('morgan');
+const path = require('path');
 
 const error = require('../middlewares/error');
 const routes = require('../routes/index');
@@ -15,6 +16,8 @@ const start = (app) => {
 
     app.use(express.urlencoded({ extended: true }));
     app.use(express.json());
+
+    app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
     app.use(routes);
 
