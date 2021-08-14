@@ -20,10 +20,12 @@ jobs:
               uses: actions/setup-node@v2
               with:
                   node-version: ${{ matrix.node-version }}
-            - name: Set up MySQL
-                run: |
-                    sudo /etc/init.d/mysql start
-                    mysql -e 'CREATE DATABASE ${{secrets.DB_NAME}};' -u${{secrets.DB_USER}} -p${{secrets.DB_PASSWORD}}
+            - name: Set up MySQL 5.7
+                uses: mirromutth/mysql-action@master
+                with:
+                    mysql version: 5.7
+                    mysql database: ${{secrets.DB_NAME}}
+                    mysql root password: ${{ secrets.DB_PASSWORD }}
             - name: Install dependencies
               run: npm ci
               env:
