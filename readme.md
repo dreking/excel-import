@@ -1,6 +1,6 @@
 # Import Excel Data
 
-This project is build to handle all backend logic of manipulating excel files
+This project is build to handle all backend logic of manipulating excel files and saving in MySQL
 
 # Prerequisites
 
@@ -10,7 +10,7 @@ To snip up this server, make sure you have [NodeJS](https://nodejs.org)
 
 -   Clone this repo
 -   In your terminal run `npm i`
--   Ask developer for `.env` file for credentials
+-   Check `.example.env` for a clear `.env` file variables, if you have a question ask developer
 
 # Run
 
